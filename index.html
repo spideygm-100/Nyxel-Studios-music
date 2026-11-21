@@ -1,319 +1,126 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nyxel Studios</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        nyxBg: '#050505',
-                        nyxCard: '#0d0d0f',
-                        nyxRed: '#ff0022',
-                        nyxPink: '#d90055',
-                        nyxGray: '#8a8a93',
-                        nyxBorder: '#1f1f22'
-                    },
-                    fontFamily: {
-                        orbitron: ['Orbitron', 'sans-serif'],
-                        rajdhani: ['Rajdhani', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-
-    <style>
-        body {
-            background-color: #050505;
-            color: #ffffff;
-            font-family: 'Rajdhani', sans-serif;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6, .font-heading {
-            font-family: 'Orbitron', sans-serif;
-        }
-
-        /* Hero Text Gradient & Glow */
-        .text-glow-red {
-            background: linear-gradient(90deg, #ff0022 0%, #d90055 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0px 0px 30px rgba(255, 0, 34, 0.4);
-        }
-
-        /* Subtle glows for cards */
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        .card-hover:hover {
-            border-color: #ff0022;
-            box-shadow: 0 10px 30px -10px rgba(255, 0, 34, 0.15);
-            transform: translateY(-5px);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #050505; }
-        ::-webkit-scrollbar-thumb { background: #ff0022; border-radius: 4px; }
-    </style>
+    <title>Nyxel Music | Cinematic Audio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="antialiased selection:bg-nyxRed selection:text-white">
+<body>
+    <!-- Ambient Background Glow -->
+    <div class="ambient-glow glow-purple"></div>
+    <div class="ambient-glow glow-pink"></div>
 
-    <nav class="w-full border-b border-nyxBorder/50 bg-nyxBg/80 backdrop-blur-md fixed top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <a href="#" class="font-heading font-bold text-2xl tracking-widest flex items-center">
-                NYXEL<span class="text-nyxRed">.</span>STUDIOS
-            </a>
-            
-            <div class="hidden md:flex items-center space-x-6 text-sm font-semibold tracking-wide text-gray-300">
-                <a href="#" class="text-white relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-[2px] after:bg-nyxRed">Home</a>
-                <a href="#" class="hover:text-white transition-colors">Stories</a>
-                <a href="#" class="hover:text-white transition-colors">Video Editing</a>
-                <a href="#" class="hover:text-white transition-colors">Web Dev</a>
-                <a href="#" class="hover:text-white transition-colors">App Dev</a>
-                <a href="#" class="hover:text-white transition-colors">Code Fix</a>
-                <a href="#" class="hover:text-white transition-colors">Portfolio</a>
-                <a href="#" class="hover:text-white transition-colors">Contact</a>
+    <div class="app-container">
+        <!-- Header -->
+        <header class="top-bar">
+            <div class="brand">
+                <span class="brand-dot"></span>
+                <h1>NYXEL <span>MUSIC</span></h1>
             </div>
-        </div>
-    </nav>
+            <div id="auth-status" class="status-badge">Guest Mode</div>
+        </header>
 
-    <section class="pt-40 pb-20 px-6 flex flex-col items-center justify-center text-center min-h-screen max-w-5xl mx-auto">
-        
-        <div class="border border-nyxBorder rounded-full px-4 py-1.5 flex items-center space-x-2 mb-10 bg-nyxCard/50">
-            <div class="w-2 h-2 rounded-full bg-nyxRed shadow-[0_0_10px_#ff0022]"></div>
-            <span class="text-xs font-bold tracking-widest uppercase text-gray-300">Future Ready Digital Agency</span>
-        </div>
-
-        <h1 class="font-heading font-black text-6xl md:text-8xl leading-[0.9] tracking-tighter mb-6">
-            <span class="block text-gray-200">BUILDING</span>
-            <span class="block text-gray-400 mb-2">STORIES.</span>
-            <span class="block text-glow-red">DESIGNING</span>
-            <span class="block text-glow-red">FUTURES.</span>
-        </h1>
-
-        <p class="text-nyxGray text-lg md:text-xl max-w-3xl mb-12 font-medium">
-            Nyxel Studios is a premium digital agency specializing in high-end video editing, web development, app creation, and technical solutions. We turn visions into digital reality.
-        </p>
-
-        <div class="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <a href="#" class="bg-nyxRed text-white font-bold tracking-widest uppercase px-8 py-4 rounded-md shadow-[0_0_20px_rgba(255,0,34,0.4)] hover:bg-nyxPink transition-colors">
-                Start a Project
-            </a>
-            <a href="#" class="bg-transparent border border-gray-600 text-white font-bold tracking-widest uppercase px-8 py-4 rounded-md hover:border-white transition-colors">
-                View Portfolio
-            </a>
-        </div>
-    </section>
-
-    <section class="py-20 px-6 max-w-7xl mx-auto border-t border-nyxBorder/30 mt-10">
-        <div class="text-center mb-16">
-            <h2 class="font-heading text-4xl font-bold mb-4">
-                Our <span class="text-nyxRed relative">Expertise
-                    <span class="absolute -bottom-2 left-1/4 w-1/2 h-[3px] bg-nyxRed"></span>
-                </span>
-            </h2>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-nyxCard border border-nyxBorder rounded-xl p-8 card-hover group">
-                <div class="w-12 h-12 bg-nyxRed/10 rounded-lg flex items-center justify-center mb-6 text-nyxRed">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"></path></svg>
+        <!-- Main Music Player Card -->
+        <main class="player-card">
+            <div class="artwork-wrapper">
+                <div class="artwork-placeholder" id="track-art">
+                    <div class="vinyl-ring"></div>
+                    <span class="art-label">NYXEL</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold mb-3 text-gray-200 group-hover:text-white transition-colors">Video Editing</h3>
-                <p class="text-nyxGray mb-6 min-h-[60px]">Cinematic cuts, sound design, and visual effects that tell compelling stories.</p>
-                <a href="#" class="text-nyxRed font-semibold flex items-center hover:text-nyxPink transition-colors">Explore <span class="ml-2">→</span></a>
             </div>
 
-            <div class="bg-nyxCard border border-nyxBorder rounded-xl p-8 card-hover group">
-                <div class="w-12 h-12 bg-nyxRed/10 rounded-lg flex items-center justify-center mb-6 text-nyxRed">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+            <div class="track-info">
+                <h2 id="track-title">Midnight Neon</h2>
+                <p class="artist" id="track-artist">Nyxel Soundworks</p>
+                <p class="description" id="track-desc">Dark synthwave textures layered over deep sub-bass and cinematic atmospheres.</p>
+            </div>
+
+            <!-- Progress Bar -->
+            <div class="progress-section">
+                <div class="progress-bar" id="progress-container">
+                    <div class="progress-fill" id="progress-fill"></div>
                 </div>
-                <h3 class="font-heading text-xl font-bold mb-3 text-gray-200 group-hover:text-white transition-colors">Web Development</h3>
-                <p class="text-nyxGray mb-6 min-h-[60px]">Responsive, fast, and SEO-optimized websites tailored to your brand.</p>
-                <a href="#" class="text-nyxRed font-semibold flex items-center hover:text-nyxPink transition-colors">Explore <span class="ml-2">→</span></a>
-            </div>
-
-            <div class="bg-nyxCard border border-nyxBorder rounded-xl p-8 card-hover group">
-                <div class="w-12 h-12 bg-nyxRed/10 rounded-lg flex items-center justify-center mb-6 text-nyxRed">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                <div class="time-stamps">
+                    <span id="current-time">0:00</span>
+                    <span id="total-time">3:42</span>
                 </div>
-                <h3 class="font-heading text-xl font-bold mb-3 text-gray-200 group-hover:text-white transition-colors">App Development</h3>
-                <p class="text-nyxGray mb-6 min-h-[60px]">Native and cross-platform mobile applications with intuitive UI/UX.</p>
-                <a href="#" class="text-nyxRed font-semibold flex items-center hover:text-nyxPink transition-colors">Explore <span class="ml-2">→</span></a>
             </div>
 
-            <div class="bg-nyxCard border border-nyxBorder rounded-xl p-8 card-hover group">
-                <div class="w-12 h-12 bg-nyxRed/10 rounded-lg flex items-center justify-center mb-6 text-nyxRed">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                </div>
-                <h3 class="font-heading text-xl font-bold mb-3 text-gray-200 group-hover:text-white transition-colors">Code Fixing</h3>
-                <p class="text-nyxGray mb-6 min-h-[60px]">Expert debugging, optimization, and feature additions for your existing codebase.</p>
-                <a href="#" class="text-nyxRed font-semibold flex items-center hover:text-nyxPink transition-colors">Explore <span class="ml-2">→</span></a>
+            <!-- Primary Controls -->
+            <div class="controls">
+                <button class="btn-icon" id="prev-btn" title="Previous Track">⏮</button>
+                <button class="btn-play protected-action" data-action="play" id="play-btn" title="Play / Pause">▶</button>
+                <button class="btn-icon" id="next-btn" title="Next Track">⏭</button>
             </div>
 
-            <div class="bg-nyxCard border border-nyxBorder rounded-xl p-8 card-hover group">
-                <div class="w-12 h-12 bg-nyxRed/10 rounded-lg flex items-center justify-center mb-6 text-nyxRed">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                </div>
-                <h3 class="font-heading text-xl font-bold mb-3 text-gray-200 group-hover:text-white transition-colors">E-Books & Stories</h3>
-                <p class="text-nyxGray mb-6 min-h-[60px]">Immersive reading experiences with dark mode and chapter-based layouts.</p>
-                <a href="#" class="text-nyxRed font-semibold flex items-center hover:text-nyxPink transition-colors">Explore <span class="ml-2">→</span></a>
+            <!-- Secondary Protected Actions -->
+            <div class="action-bar">
+                <button class="btn-secondary protected-action" data-action="download">
+                    <span>↓</span> Download
+                </button>
+                <button class="btn-secondary protected-action" data-action="lyrics">
+                    <span>≡</span> Lyrics
+                </button>
+                <button class="btn-secondary protected-action" data-action="playlist">
+                    <span>+</span> Playlist
+                </button>
             </div>
 
-            <div class="bg-nyxCard border border-nyxBorder rounded-xl p-8 card-hover group">
-                <div class="w-12 h-12 bg-nyxRed/10 rounded-lg flex items-center justify-center mb-6 text-nyxRed">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h3 class="font-heading text-xl font-bold mb-3 text-gray-200 group-hover:text-white transition-colors">Digital Consultation</h3>
-                <p class="text-nyxGray mb-6 min-h-[60px]">Strategic guidance to elevate your digital presence and tech stack.</p>
-                <a href="#" class="text-nyxRed font-semibold flex items-center hover:text-nyxPink transition-colors">Explore <span class="ml-2">→</span></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 max-w-7xl mx-auto border-t border-nyxBorder/30 mt-10">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            
-            <div>
-                <h2 class="font-heading text-4xl font-bold mb-6">
-                    Why <span class="text-nyxRed">Nyxel Studios?</span>
-                </h2>
-                <p class="text-nyxGray text-lg mb-10 leading-relaxed">
-                    We don't just build; we craft. Our team combines technical expertise with creative vision to deliver products that stand out in the digital noise.
+            <!-- Expandable Panels (Lyrics & Playlist) -->
+            <div id="lyrics-panel" class="drawer hidden">
+                <h3>Track Lyrics</h3>
+                <p id="lyrics-content">
+                    Shadows stretch across the chrome,<br>
+                    Static hums inside the zone.<br>
+                    Purple lights reflect the rain,<br>
+                    Echoes fade into the frame.
                 </p>
-
-                <div class="space-y-8">
-                    <div class="flex items-start">
-                        <div class="mt-1 w-10 h-10 rounded-full border border-nyxRed/30 flex items-center justify-center text-nyxRed shrink-0 mr-4">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="font-heading text-xl font-bold text-white mb-1">Premium Quality</h4>
-                            <p class="text-nyxGray">We maintain the highest standards in code, design, and production value.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="flex items-start">
-                        <div class="mt-1 w-10 h-10 rounded-full border border-nyxRed/30 flex items-center justify-center text-nyxRed shrink-0 mr-4">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="font-heading text-xl font-bold text-white mb-1">Fast Delivery</h4>
-                            <p class="text-nyxGray">Optimized workflows ensure we meet deadlines without compromising quality.</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-start">
-                        <div class="mt-1 w-10 h-10 rounded-full border border-nyxRed/30 flex items-center justify-center text-nyxRed shrink-0 mr-4">
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="font-heading text-xl font-bold text-white mb-1">Client Centric</h4>
-                            <p class="text-nyxGray">24/7 support and revisions to ensure your complete satisfaction.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
 
-            <div class="bg-nyxCard border border-nyxBorder p-8 rounded-2xl relative">
-                <div class="absolute -inset-1 bg-gradient-to-r from-nyxRed to-nyxPink opacity-10 blur-xl rounded-3xl -z-10"></div>
+            <div id="playlist-panel" class="drawer hidden">
+                <h3>Up Next</h3>
+                <ul class="playlist-list" id="playlist-items">
+                    <!-- Populated via JS -->
+                </ul>
+            </div>
+        </main>
+    </div>
+
+    <!-- Simulated Demo Login Modal -->
+    <div id="login-modal" class="modal-overlay hidden">
+        <div class="glass-modal">
+            <div class="sim-banner">
+                SIMULATED DEMO LOGIN • NOT AN OFFICIAL SOCIAL AUTH PAGE
+            </div>
+            
+            <div class="modal-header">
+                <h2 class="demo-logo">SocialConnect</h2>
+                <p class="modal-sub">Sign in with demo credentials to unlock playback & downloads.</p>
+            </div>
+
+            <form id="demo-login-form">
+                <div class="input-group">
+                    <input type="text" id="demo-user" value="nyxel_demo_user" readonly aria-label="Demo Username">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="demo-pass" value="••••••••••••" readonly aria-label="Demo Password">
+                </div>
+                <p class="helper-note">Pre-filled sandbox credentials. No data is transmitted or stored.</p>
                 
-                <div class="flex items-center mb-6">
-                    <div class="w-14 h-14 rounded-full border-2 border-nyxRed overflow-hidden mr-4">
-                        <img src="https://api.dicebear.com/7.x/avataaars/svg?seed=Zoro&backgroundColor=b6e3f4" alt="Roronoa Zoro" class="w-full h-full object-cover">
-                    </div>
-                    <div>
-                        <h4 class="font-heading font-bold text-xl">Roronoa Zoro</h4>
-                        <span class="text-nyxRed text-sm font-semibold">SwordMen</span>
-                    </div>
-                </div>
-                <p class="text-gray-300 italic text-lg leading-relaxed mb-6">
-                    "Nyxel Studios completely transformed our app's interface. The dark aesthetics and smooth animations are exactly what we needed to capture our audience."
-                </p>
-                <div class="flex text-yellow-500 text-lg space-x-1">
-                    <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
-                </div>
-            </div>
+                <button type="submit" class="btn-demo-submit">Continue as Demo User</button>
+            </form>
+
+            <div class="divider"><span>OR</span></div>
+
+            <button type="button" id="cancel-login" class="btn-cancel">Cancel & Return to Player</button>
         </div>
-    </section>
+    </div>
 
-    <section class="py-24 text-center">
-        <h2 class="font-heading text-4xl md:text-5xl font-black mb-6">
-            Ready to <span class="text-nyxRed">Upgrade?</span>
-        </h2>
-        <p class="text-nyxGray text-lg max-w-2xl mx-auto mb-10">
-            Join hundreds of satisfied clients who have elevated their digital presence with Nyxel Studios.
-        </p>
-        <a href="#" class="inline-flex items-center justify-center bg-white text-black font-bold text-lg px-8 py-4 rounded-full hover:bg-gray-200 transition-colors shadow-lg shadow-white/10">
-            Start Your Project Now
-            <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-        </a>
-    </section>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast hidden"></div>
 
-    <footer class="bg-nyxBg border-t border-nyxBorder/50 pt-16 pb-8 px-6">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-16">
-            
-            <div class="md:col-span-1">
-                <a href="#" class="font-heading font-bold text-xl tracking-widest flex items-center mb-4">
-                    NYXEL<span class="text-nyxRed">.</span>STUDIOS
-                </a>
-                <p class="text-nyxGray text-sm pr-4 leading-relaxed">
-                    Building Stories. Designing Digital Futures. We craft premium digital experiences with a futuristic edge.
-                </p>
-            </div>
-
-            <div>
-                <h4 class="font-heading text-white font-bold mb-6 border-l-2 border-nyxRed pl-3">Services</h4>
-                <ul class="space-y-3 text-sm text-nyxGray">
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Video Editing</a></li>
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Web Development</a></li>
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">App Development</a></li>
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Code Fixing</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-heading text-white font-bold mb-6 border-l-2 border-nyxRed pl-3">Company</h4>
-                <ul class="space-y-3 text-sm text-nyxGray">
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Portfolio</a></li>
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Stories & E-Books</a></li>
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Contact Us</a></li>
-                </ul>
-            </div>
-
-            <div>
-                <h4 class="font-heading text-white font-bold mb-6 border-l-2 border-nyxRed pl-3">Legal</h4>
-                <ul class="space-y-3 text-sm text-nyxGray">
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Terms of Service</a></li>
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Privacy Policy</a></li>
-                    <li><a href="#" class="hover:text-nyxRed transition-colors">Refund Policy</a></li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="max-w-7xl mx-auto border-t border-nyxBorder/50 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-nyxGray">
-            <p>© 2026 Nyxel Studios. All rights reserved.</p>
-            <div class="flex space-x-4 mt-4 md:mt-0">
-                <a href="#" class="w-8 h-8 rounded bg-nyxCard border border-nyxBorder flex items-center justify-center hover:text-nyxRed hover:border-nyxRed transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-                </a>
-                <a href="#" class="w-8 h-8 rounded bg-nyxCard border border-nyxBorder flex items-center justify-center hover:text-nyxRed hover:border-nyxRed transition-colors">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
-                </a>
-            </div>
-        </div>
-    </footer>
-
+    <script src="app.js"></script>
 </body>
 </html>
